@@ -1,5 +1,5 @@
 //variables
-let numeroSecreto = 4;
+let numeroSecreto = Math.floor(Math.random() * 10) + 1;
 let numeroUsuario = 0;
 let contadorIntentos = 1;
 //let palabraIntento = 'intento';
@@ -23,7 +23,7 @@ while (numeroUsuario != numeroSecreto) {
         contadorIntentos++;
         //palabraIntento = 'intentos';
         if(contadorIntentos > MaximoIntentos){
-            alert(`llegaste al maximo de intentos que es ${MaximoIntentos} intentos`);
+            alert(`llegaste al maximo de intentos que es ${MaximoIntentos} intentos y el numero secreto es ${numeroSecreto}`);
             break;
         }
     }
