@@ -1,4 +1,5 @@
 //variables
+
 let numeroSecreto = 4;
 let numeroUsuario = 0;
 let contadorIntentos = 1;
@@ -11,6 +12,7 @@ while (numeroUsuario != numeroSecreto) {
     if (numeroSecreto == numeroUsuario) {
         //acertamos fue veradera la condicion
         alert(`Adivinaste el número es: ${numeroUsuario}, lo hiciste en ${contadorIntentos} ${palabraIntento}`);
+        break;
     }else{
         if(numeroUsuario > numeroSecreto){
             alert('El numero secreto es menor');
@@ -20,5 +22,9 @@ while (numeroUsuario != numeroSecreto) {
         //incrmementamos el contador de intentos cuando no hacierta
         contadorIntentos = contadorIntentos + 1;
         palabraIntento = 'intentos';
+        if(contadorIntentos > 3){
+            alert('llegaste al maximo de intentos');
+            break;
+        }
     }
 };
